@@ -16,7 +16,8 @@ pipeline {
 
         stage ('Run App') {
             steps {
-                bat 'nohup npm start &'
+                bat 'start "" /b cmd /c "npm start"'
+                bat 'timeout /t 5'
             }
         }
     }
