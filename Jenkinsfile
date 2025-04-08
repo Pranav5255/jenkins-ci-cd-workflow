@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
 
         stage ('Run App') {
             steps {
-                sh 'nohup npm start &'
+                bat 'nohup npm start &'
             }
         }
     }
